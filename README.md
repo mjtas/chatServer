@@ -47,7 +47,8 @@ go build -o go-chat-server
 - Start server:  
 ```./go-chat-server```
 - Connect with TLS Client:  
-```openssl s_client -connect localhost:8080  
+```bash  
+openssl s_client -connect localhost:8080
 # Sample session:  
 > Enter name: Moira  
 < Moira joined  
@@ -55,11 +56,13 @@ go build -o go-chat-server
 < Moira: Hello!  
 ```
 - UDP Echo Test:  
-```echo "test" | nc -u localhost 8081  
+```bash  
+echo "test" | nc -u localhost 8081  
 # Response: UDP echo: test
 ```
 - Metrics Endpoint:  
-``` curl http://localhost:6060/metrics  
+```bash  
+curl http://localhost:6060/metrics  
 # Sample output:  
 active_connections 3  
 bytes_sent 1429  
